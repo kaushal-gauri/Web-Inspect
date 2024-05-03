@@ -1,0 +1,91 @@
+domain,technology,version,categories
+https://studyoverseas-sop.lpu.in,Google Tag Manager,,Tag managers
+http://iqac.lpu.in,IIS,,Web servers
+http://iqac.lpu.in,Microsoft ASP.NET,,Web frameworks
+http://iqac.lpu.in,Cloudflare,,CDN
+http://iqac.lpu.in,Windows Server,,Operating systems
+http://onlineexam.lpu.in,Error,"HTTPConnectionPool(host='onlineexam.lpu.in', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f09e2179850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+http://blog.lpu.in,Lua,,Programming languages
+http://blog.lpu.in,Nginx,,"Web servers, Reverse proxies"
+http://blog.lpu.in,OpenResty,,Web servers
+http://kalvi.lpu.in,Cloudflare,,CDN
+https://admit.lpu.in,Google Plus,,Widgets
+https://admit.lpu.in,IIS,,Web servers
+https://admit.lpu.in,Bootstrap,,UI frameworks
+https://admit.lpu.in,Google Font API,,Font scripts
+https://admit.lpu.in,Google Tag Manager,,Tag managers
+https://admit.lpu.in,DataTables,,JavaScript libraries
+https://admit.lpu.in,Moment.js,,JavaScript libraries
+https://admit.lpu.in,Linkedin,,Widgets
+https://admit.lpu.in,Microsoft ASP.NET,4.0.30319,Web frameworks
+https://admit.lpu.in,Windows Server,,Operating systems
+https://admit.lpu.in,Cloudflare,,CDN
+https://admit.lpu.in,jQuery,3.4.1,JavaScript libraries
+https://admit.lpu.in,Modernizr,,JavaScript libraries
+https://admit.lpu.in,Font Awesome,,Font scripts
+https://admit.lpu.in,Google Sign-in,,Social login
+http://myclass.lpu.in,Error,"HTTPSConnectionPool(host='myclass.lpu.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)')))",
+https://studyoverseas.lpu.in,Google Tag Manager,,Tag managers
+http://ap4.lpu.in,Error,"HTTPConnectionPool(host='ap4.lpu.in', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f09e2189810>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+http://ap2.lpu.in,Error,"HTTPConnectionPool(host='ap2.lpu.in', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f09e218bd50>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+http://gifcdn.lpu.in,Cloudflare,,CDN
+https://placements.lpu.in,IIS,,Web servers
+https://placements.lpu.in,Microsoft ASP.NET,4.0.30319,Web frameworks
+https://placements.lpu.in,Cloudflare,,CDN
+https://placements.lpu.in,Windows Server,,Operating systems
+https://youthvibe.lpu.in,OWL Carousel,,Widgets
+https://youthvibe.lpu.in,Ruby on Rails,,Web frameworks
+https://youthvibe.lpu.in,Fastly,,CDN
+https://youthvibe.lpu.in,Varnish,,Caching
+https://youthvibe.lpu.in,YouTube,,Video players
+https://youthvibe.lpu.in,jsDelivr,,CDN
+https://youthvibe.lpu.in,Ruby,,Programming languages
+https://youthvibe.lpu.in,GitHub Pages,,PaaS
+https://youthvibe.lpu.in,jQuery,3.4.1,JavaScript libraries
+https://youthvibe.lpu.in,Font Awesome,6.4.0,Font scripts
+http://www.happenings.lpu.in,Error,"HTTPConnectionPool(host='www.happenings.lpu.in', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f09e1f26490>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+http://ap3.lpu.in,Error,"HTTPConnectionPool(host='ap3.lpu.in', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f09e1f25cd0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+http://convocation.lpu.in,Cloudflare,,CDN
+https://oas.lpu.in,IIS,7.5,Web servers
+https://oas.lpu.in,Microsoft ASP.NET,4.0.30319,Web frameworks
+https://oas.lpu.in,SweetAlert,,JavaScript libraries
+https://oas.lpu.in,Windows Server,,Operating systems
+https://schools.lpu.in,IIS,7.5,Web servers
+https://schools.lpu.in,Bootstrap,4.7.0,UI frameworks
+https://schools.lpu.in,Google Font API,,Font scripts
+https://schools.lpu.in,animate.css,,UI frameworks
+https://schools.lpu.in,DataTables,,JavaScript libraries
+https://schools.lpu.in,SweetAlert2,,JavaScript libraries
+https://schools.lpu.in,Windows Server,,Operating systems
+https://schools.lpu.in,Microsoft ASP.NET,4.0.30319,Web frameworks
+https://schools.lpu.in,jsDelivr,,CDN
+https://schools.lpu.in,Cloudflare,,CDN
+https://schools.lpu.in,jQuery,3.4.1,JavaScript libraries
+https://schools.lpu.in,Font Awesome,6.4.0,Font scripts
+https://ums.lpu.in,IIS,7.5,Web servers
+https://ums.lpu.in,Bootstrap,4.7.0,UI frameworks
+https://ums.lpu.in,Google Font API,,Font scripts
+https://ums.lpu.in,Windows Server,,Operating systems
+https://ums.lpu.in,Microsoft ASP.NET,4.0.30319,Web frameworks
+https://ums.lpu.in,jQuery,3.4.1,JavaScript libraries
+https://ums.lpu.in,Font Awesome,6.4.0,Font scripts
+http://myexam.lpu.in,Error,"HTTPSConnectionPool(host='myexam.lpu.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)')))",
+https://happenings.lpu.in,jQuery Migrate,3.4.1,JavaScript libraries
+https://happenings.lpu.in,Google Font API,,Font scripts
+https://happenings.lpu.in,Revslider,,Miscellaneous
+https://happenings.lpu.in,Lua,,Programming languages
+https://happenings.lpu.in,Nginx,,"Web servers, Reverse proxies"
+https://happenings.lpu.in,WordPress,,"CMS, Blogs"
+https://happenings.lpu.in,Yoast SEO,22.6,SEO
+https://happenings.lpu.in,OpenResty,,Web servers
+https://happenings.lpu.in,jQuery,3.4.1,JavaScript libraries
+https://happenings.lpu.in,MySQL,,Databases
+https://happenings.lpu.in,PHP,,Programming languages
+http://services.lpu.in,IIS,7.5,Web servers
+http://services.lpu.in,Microsoft ASP.NET,4.0.30319,Web frameworks
+http://services.lpu.in,Windows Server,,Operating systems
+http://lpu.in,Error,"HTTPSConnectionPool(host='www.lpu.in', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f09e1c4de50>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+http://www.internet.lpu.in,Error,"HTTPConnectionPool(host='www.internet.lpu.in', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f09e1c4f790>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+http://alumni.lpu.in,Error,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+https://careers.lpu.in,Google Tag Manager,,Tag managers
+https://careers.lpu.in,Nginx,,"Web servers, Reverse proxies"
