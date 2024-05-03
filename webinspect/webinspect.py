@@ -1,13 +1,14 @@
+import argparse
 from Wappalyzer import Wappalyzer, WebPage
 import csv
 import requests
 import subprocess
 import warnings
-import sys 
- 
+import sys
+
 # Ignore specific UserWarnings from Wappalyzer
 warnings.filterwarnings("ignore", message="Caught 'unbalanced parenthesis at position 119' compiling regex")
- 
+
 def find_subdomains(domain):
     # Run the subfinder command and capture the output
     result = subprocess.run(['subfinder', '-d', domain, '-silent'], capture_output=True, text=True)
@@ -16,7 +17,7 @@ def find_subdomains(domain):
     else:
         print(f"Error finding subdomains for {domain}: {result.stderr}")
         return []
- 
+
 def check_https(url):
     try:
         # Try connecting with HTTPS
@@ -27,39 +28,35 @@ def check_https(url):
         pass
     # Fallback to HTTP if HTTPS fails
     return f"http://{url}"
- 
-def analyze_urls():
+
+def analyze_urls(domain_list):
     wappalyzer = Wappalyzer.latest()
- 
+
     # Open the CSV file for writing
     with open('results.csv', 'w', newline='') as csvfile:
         fieldnames = ['domain', 'technology', 'version', 'categories']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
- 
-        # Read domains from a file
-        with open('domains.txt', 'r') as file:
-            domains = file.read().splitlines()
- 
-        for domain in domains:
+
+        for domain in domain_list:
             if domain:
                 subdomains = find_subdomains(domain)
                 for subdomain in subdomains:
-                    url = check_https(subdomain)  # Check and prepend the correct scheme
+                    url = check_https(subdomain) # Check and prepend the correct scheme
                     attempts = 0
                     success = False
-                    while attempts < 3 and not success:  # Retry logic for robustness
+                    while attempts < 3 and not success: # Retry logic for robustness
                         try:
                             # Increase timeout to handle slow responses
                             webpage = WebPage.new_from_url(url, timeout=40)
                             analysis_results = wappalyzer.analyze_with_versions_and_categories(webpage)
-                            success = True  # Mark success if no exception was raised
- 
+                            success = True # Mark success if no exception was raised
+
                             for tech, details in analysis_results.items():
                                 versions = details.get('versions', [])
-                                version = versions[0] if versions else ''  
-                                categories = ', '.join(details.get('categories', []))  
- 
+                                version = versions[0] if versions else ''
+                                categories = ', '.join(details.get('categories', []))
+
                                 row = {
                                     'domain': url,
                                     'technology': tech,
@@ -72,27 +69,30 @@ def analyze_urls():
                             print(f"Timeout on {url}, attempt {attempts}")
                         except Exception as e:
                             writer.writerow({'domain': url, 'technology': 'Error', 'version': str(e), 'categories': ''})
-                            break  # Exit the retry loop on non-timeout exceptions
+                            break # Exit the retry loop on non-timeout exceptions
 
 def print_banner():
     banner = """
- ██╗    ██╗███████╗██████╗     ██╗███╗   ██╗███████╗██████╗ ███████╗ ██████╗████████╗
-██║    ██║██╔════╝██╔══██╗    ██║████╗  ██║██╔════╝██╔══██╗██╔════╝██╔════╝╚══██╔══╝
-██║ █╗ ██║█████╗  ██████╔╝    ██║██╔██╗ ██║███████╗██████╔╝█████╗  ██║        ██║   
-██║███╗██║██╔══╝  ██╔══██╗    ██║██║╚██╗██║╚════██║██╔═══╝ ██╔══╝  ██║        ██║    
-╚███╔███╔╝███████╗██████╔╝    ██║██║ ╚████║███████║██║     ███████╗╚██████╗   ██║   
- ╚══╝╚══╝ ╚══════╝╚═════╝     ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝     ╚══════╝ ╚═════╝   ╚═╝   
-                                                                                    
+██╗  ██╗███████╗██████╗   ██╗███╗  ██╗███████╗██████╗ ███████╗ ██████╗████████╗
+██║  ██║██╔════╝██╔══██╗  ██║████╗ ██║██╔════╝██╔══██╗██╔════╝██╔════╝╚══██╔══╝
+██║ █╗ ██║█████╗ ██████╔╝  ██║██╔██╗██║███████╗██████╔╝█████╗ ██║        ██║   
+██║███╗██║██╔══╝ ██╔══██╗  ██║██║╚██╗██║╚════██║██╔═══╝ ██╔══╝ ██║       ██║   
+╚███╔███╔╝███████╗██████╔╝  ██║██║ ╚████║███████║██║   ███████╗╚██████   ██║   
+ ╚══╝╚══╝ ╚══════╝╚═════╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝   ╚══════╝ ╚═════╝  ╚═╝   
+                                                                                
     """
     print(banner)
     print("Starting Web Inspect...")
 
- 
-if __name__ == "__main__":
+def main():
+    parser = argparse.ArgumentParser(description="Web Inspect: Analyze domains for technologies and versions.")
+    parser.add_argument('domains', metavar='DOMAIN', type=str, nargs='+', help='Domain(s) to analyze')
+
+    args = parser.parse_args()
     print_banner()
-   # analyze_urls()
-    try:
-        analyze_urls()
-    except KeyboardInterrupt:
-        print("\nKeyboard interrupt detected. Exiting...")
-        sys.exit(0)
+    analyze_urls(args.domains)
+
+    print("the results saved to results.csv file in the downloaded folder of the tool")
+
+if __name__ == "__main__":
+    main()
