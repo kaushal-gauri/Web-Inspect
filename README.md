@@ -58,6 +58,7 @@ sudo apt-get install subfinder
    python webinspect.py  <domain name>
    ```
 
+![1] (.media/1.png)
 2. **Review the Output:**
 
    - The script generates a CSV file named `results.csv` that contains the identified technologies for each subdomain.
