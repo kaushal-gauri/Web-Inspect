@@ -24,8 +24,8 @@ This Python script leverages the power of Wappalyzer and a subdomain finder to i
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://your-repository-url.git
-   cd your-repository-directory
+   git clone https://github.com/kaushal-gauri/Web-Inspect.git
+   cd Web-Inspect
    ```
 
 2. **Create a Python Virtual Environment (Recommended):**
