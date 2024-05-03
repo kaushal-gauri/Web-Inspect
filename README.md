@@ -55,7 +55,7 @@ sudo apt-get install subfinder
 1. **Run the Script:**
 
    ```bash
-   python webinspect.py  
+   python webinspect.py  <domain name>
    ```
 
 2. **Review the Output:**
