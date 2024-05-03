@@ -64,7 +64,6 @@ sudo apt-get install subfinder
 
 **Error Handling**
 
-- The script gracefully suppresses specific warnings from Wappalyzer related to potential regex compilation issues.
 - HTTP and HTTPS connection errors are handled appropriately. If HTTPS fails for a subdomain, the script attempts HTTP.
 - Timeouts and other exceptions are logged to the console for troubleshooting purposes.
 
