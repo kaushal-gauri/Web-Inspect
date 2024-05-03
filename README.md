@@ -32,8 +32,7 @@ This Python script leverages the power of Wappalyzer and a subdomain finder to i
 
    ```bash
    python -m venv venv
-   source venv/bin/activate  # For Linux/macOS
-   venv\Scripts\activate     # For Windows
+   source venv/bin/activate  # For Linux
    ```
 
 3. **Install Required Packages:**
@@ -42,29 +41,24 @@ This Python script leverages the power of Wappalyzer and a subdomain finder to i
    pip install -r requirements.txt
    ```
 
-4. **Install `subfinder` (Linux/macOS):**
+4. **Install `subfinder` (Linux):**
 
    - Follow the official installation instructions for your Linux distribution or macOS version. Tools like `apt`, `yum`, `Homebrew`, or package managers provided by your distribution can often be used for installation.
+ OR 
 
-5. **Install `subfinder` (Windows):**
-
-   - Download the pre-built binary from the official `subfinder` repository ([https://github.com/projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder)).
-   - Extract the downloaded file (e.g., `subfinder_windows_amd64.exe`).
-   - Add the directory containing the extracted `subfinder.exe` to your system's PATH environment variable. This ensures you can run `subfinder` from any command prompt.
+```bash
+sudo apt-get install subfinder
+```
 
 **Usage**
 
-1. **Prepare Your Domain List:**
-
-   - Create a text file named `domains.txt` and list each domain you want to analyze on a separate line.
-
-2. **Run the Script:**
+1. **Run the Script:**
 
    ```bash
-   python url_analyzer.py  # Assuming your script is named url_analyzer.py
+   python webinspect.py  
    ```
 
-3. **Review the Output:**
+2. **Review the Output:**
 
    - The script generates a CSV file named `results.csv` that contains the identified technologies for each subdomain.
 
@@ -86,9 +80,5 @@ example.com,Bootstrap,4.6.1,CSS Framework
 
 **Additional Notes**
 
-- This tool may not analyse all the sub domains but will
-- Explore advanced features in Wappalyzer for more granular technology detection.
-
-I hope this enhanced response effectively combines the strengths of both Response A and Response B, providing a clear, informative, and well-structured guide for users. If you have further questions, feel free to ask!
-
+- This tool may not capture all subdomains, but it works effectively for most cases.
 
